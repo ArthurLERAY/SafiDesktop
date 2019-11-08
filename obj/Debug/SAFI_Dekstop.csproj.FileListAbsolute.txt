@@ -1,0 +1,11 @@
+E:\01 - Spécialité\PPE3\SAFI_Dekstop\SAFI_Dekstop\bin\Debug\SAFI_Dekstop.exe.config
+E:\01 - Spécialité\PPE3\SAFI_Dekstop\SAFI_Dekstop\bin\Debug\SAFI_Dekstop.exe
+E:\01 - Spécialité\PPE3\SAFI_Dekstop\SAFI_Dekstop\bin\Debug\SAFI_Dekstop.pdb
+E:\01 - Spécialité\PPE3\SAFI_Dekstop\SAFI_Dekstop\obj\Debug\SAFI_Dekstop.csprojAssemblyReference.cache
+E:\01 - Spécialité\PPE3\SAFI_Dekstop\SAFI_Dekstop\obj\Debug\SAFI_Dekstop.safi_dekstop.resources
+E:\01 - Spécialité\PPE3\SAFI_Dekstop\SAFI_Dekstop\obj\Debug\SAFI_Dekstop.Properties.Resources.resources
+E:\01 - Spécialité\PPE3\SAFI_Dekstop\SAFI_Dekstop\obj\Debug\SAFI_Dekstop.csproj.GenerateResource.cache
+E:\01 - Spécialité\PPE3\SAFI_Dekstop\SAFI_Dekstop\obj\Debug\SAFI_Dekstop.csproj.CoreCompileInputs.cache
+E:\01 - Spécialité\PPE3\SAFI_Dekstop\SAFI_Dekstop\obj\Debug\SAFI_Dekstop.exe
+E:\01 - Spécialité\PPE3\SAFI_Dekstop\SAFI_Dekstop\obj\Debug\SAFI_Dekstop.pdb
+E:\01 - Spécialité\PPE3\SAFI_Dekstop\SAFI_Dekstop\obj\Debug\SAFI_Dekstop.frm_simulation.resources

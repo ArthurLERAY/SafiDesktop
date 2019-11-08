@@ -28,43 +28,66 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tac_accueilParam = new System.Windows.Forms.TabControl();
             this.tap_Accueil = new System.Windows.Forms.TabPage();
             this.tap_param = new System.Windows.Forms.TabPage();
-            this.tap_automatisation = new System.Windows.Forms.TabPage();
-            this.dgv_paramAutomatisation = new System.Windows.Forms.DataGridView();
-            this.col_nomParam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.col_activationParam = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.btn_simulation = new System.Windows.Forms.Button();
-            this.tap_frais = new System.Windows.Forms.TabPage();
-            this.gbx_choixRegion = new System.Windows.Forms.GroupBox();
-            this.lbx_choixRegion = new System.Windows.Forms.ListBox();
-            this.btn_validerChoixRegion = new System.Windows.Forms.Button();
-            this.gpx_frais = new System.Windows.Forms.GroupBox();
-            this.lbl_repasMidi = new System.Windows.Forms.Label();
-            this.lbl_relaisEtape = new System.Windows.Forms.Label();
-            this.lbl_nuitee = new System.Windows.Forms.Label();
-            this.lbl_deplacement = new System.Windows.Forms.Label();
-            this.lbl_coutParRepas = new System.Windows.Forms.Label();
-            this.lbl_coutParNuitRelais = new System.Windows.Forms.Label();
-            this.lbl_coutParNuitHotel = new System.Windows.Forms.Label();
-            this.lbl_coutParKm = new System.Windows.Forms.Label();
-            this.btn_enregistrerFrais = new System.Windows.Forms.Button();
             this.tac_fraisAutoSimul = new System.Windows.Forms.TabControl();
+            this.tap_frais = new System.Windows.Forms.TabPage();
+            this.gpx_frais = new System.Windows.Forms.GroupBox();
+            this.btn_enregistrerFrais = new System.Windows.Forms.Button();
+            this.lbl_coutParKm = new System.Windows.Forms.Label();
+            this.lbl_coutParNuitHotel = new System.Windows.Forms.Label();
+            this.lbl_coutParNuitRelais = new System.Windows.Forms.Label();
+            this.lbl_coutParRepas = new System.Windows.Forms.Label();
+            this.lbl_deplacement = new System.Windows.Forms.Label();
+            this.lbl_nuitee = new System.Windows.Forms.Label();
+            this.lbl_relaisEtape = new System.Windows.Forms.Label();
+            this.lbl_repasMidi = new System.Windows.Forms.Label();
+            this.gbx_choixRegion = new System.Windows.Forms.GroupBox();
+            this.btn_validerChoixRegion = new System.Windows.Forms.Button();
+            this.lbx_choixRegion = new System.Windows.Forms.ListBox();
+            this.tap_automatisation = new System.Windows.Forms.TabPage();
+            this.btn_simulation = new System.Windows.Forms.Button();
+            this.dgv_paramAutomatisation = new System.Windows.Forms.DataGridView();
+            this.col_activationParam = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.col_nomParam = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.etatFiche = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_numFiche = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_montantTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_fiche = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btn_ajouterUnUtilisateur = new System.Windows.Forms.Button();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgv_utilisateur = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_activerDesactiver = new System.Windows.Forms.DataGridViewCheckBoxColumn();
+            this.dgv_mettreAJour = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.btn_recherche = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tac_accueilParam.SuspendLayout();
+            this.tap_Accueil.SuspendLayout();
             this.tap_param.SuspendLayout();
+            this.tac_fraisAutoSimul.SuspendLayout();
+            this.tap_frais.SuspendLayout();
+            this.gpx_frais.SuspendLayout();
+            this.gbx_choixRegion.SuspendLayout();
             this.tap_automatisation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_paramAutomatisation)).BeginInit();
-            this.tap_frais.SuspendLayout();
-            this.gbx_choixRegion.SuspendLayout();
-            this.gpx_frais.SuspendLayout();
-            this.tac_fraisAutoSimul.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.etatFiche)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.tabPage1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // tac_accueilParam
             // 
             this.tac_accueilParam.Controls.Add(this.tap_Accueil);
             this.tac_accueilParam.Controls.Add(this.tap_param);
+            this.tac_accueilParam.Controls.Add(this.tabPage1);
             this.tac_accueilParam.Location = new System.Drawing.Point(12, 12);
             this.tac_accueilParam.Name = "tac_accueilParam";
             this.tac_accueilParam.SelectedIndex = 0;
@@ -73,6 +96,8 @@
             // 
             // tap_Accueil
             // 
+            this.tap_Accueil.Controls.Add(this.etatFiche);
+            this.tap_Accueil.Controls.Add(this.dataGridView1);
             this.tap_Accueil.Location = new System.Drawing.Point(4, 22);
             this.tap_Accueil.Name = "tap_Accueil";
             this.tap_Accueil.Padding = new System.Windows.Forms.Padding(3);
@@ -92,50 +117,15 @@
             this.tap_param.Text = "Paramétrage";
             this.tap_param.UseVisualStyleBackColor = true;
             // 
-            // tap_automatisation
+            // tac_fraisAutoSimul
             // 
-            this.tap_automatisation.Controls.Add(this.btn_simulation);
-            this.tap_automatisation.Controls.Add(this.dgv_paramAutomatisation);
-            this.tap_automatisation.Location = new System.Drawing.Point(4, 22);
-            this.tap_automatisation.Name = "tap_automatisation";
-            this.tap_automatisation.Padding = new System.Windows.Forms.Padding(3);
-            this.tap_automatisation.Size = new System.Drawing.Size(914, 389);
-            this.tap_automatisation.TabIndex = 2;
-            this.tap_automatisation.Text = "Automatisation";
-            this.tap_automatisation.UseVisualStyleBackColor = true;
-            // 
-            // dgv_paramAutomatisation
-            // 
-            this.dgv_paramAutomatisation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_paramAutomatisation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.col_activationParam,
-            this.col_nomParam});
-            this.dgv_paramAutomatisation.Location = new System.Drawing.Point(6, 6);
-            this.dgv_paramAutomatisation.Name = "dgv_paramAutomatisation";
-            this.dgv_paramAutomatisation.Size = new System.Drawing.Size(870, 323);
-            this.dgv_paramAutomatisation.TabIndex = 0;
-            // 
-            // col_nomParam
-            // 
-            this.col_nomParam.HeaderText = "Nom du paramètre";
-            this.col_nomParam.Name = "col_nomParam";
-            this.col_nomParam.Width = 140;
-            // 
-            // col_activationParam
-            // 
-            this.col_activationParam.HeaderText = "Activer / Désactiver";
-            this.col_activationParam.Name = "col_activationParam";
-            this.col_activationParam.Width = 140;
-            // 
-            // btn_simulation
-            // 
-            this.btn_simulation.Location = new System.Drawing.Point(742, 350);
-            this.btn_simulation.Name = "btn_simulation";
-            this.btn_simulation.Size = new System.Drawing.Size(134, 33);
-            this.btn_simulation.TabIndex = 1;
-            this.btn_simulation.Text = "Simulation";
-            this.btn_simulation.UseVisualStyleBackColor = true;
-            this.btn_simulation.Click += new System.EventHandler(this.Btn_simulation_Click);
+            this.tac_fraisAutoSimul.Controls.Add(this.tap_frais);
+            this.tac_fraisAutoSimul.Controls.Add(this.tap_automatisation);
+            this.tac_fraisAutoSimul.Location = new System.Drawing.Point(11, 17);
+            this.tac_fraisAutoSimul.Name = "tac_fraisAutoSimul";
+            this.tac_fraisAutoSimul.SelectedIndex = 0;
+            this.tac_fraisAutoSimul.Size = new System.Drawing.Size(922, 415);
+            this.tac_fraisAutoSimul.TabIndex = 0;
             // 
             // tap_frais
             // 
@@ -148,34 +138,6 @@
             this.tap_frais.TabIndex = 0;
             this.tap_frais.Text = "Frais";
             this.tap_frais.UseVisualStyleBackColor = true;
-            // 
-            // gbx_choixRegion
-            // 
-            this.gbx_choixRegion.Controls.Add(this.btn_validerChoixRegion);
-            this.gbx_choixRegion.Controls.Add(this.lbx_choixRegion);
-            this.gbx_choixRegion.Location = new System.Drawing.Point(29, 19);
-            this.gbx_choixRegion.Name = "gbx_choixRegion";
-            this.gbx_choixRegion.Size = new System.Drawing.Size(868, 76);
-            this.gbx_choixRegion.TabIndex = 0;
-            this.gbx_choixRegion.TabStop = false;
-            this.gbx_choixRegion.Text = "Choix de région :";
-            // 
-            // lbx_choixRegion
-            // 
-            this.lbx_choixRegion.FormattingEnabled = true;
-            this.lbx_choixRegion.Location = new System.Drawing.Point(15, 24);
-            this.lbx_choixRegion.Name = "lbx_choixRegion";
-            this.lbx_choixRegion.Size = new System.Drawing.Size(315, 30);
-            this.lbx_choixRegion.TabIndex = 0;
-            // 
-            // btn_validerChoixRegion
-            // 
-            this.btn_validerChoixRegion.Location = new System.Drawing.Point(390, 24);
-            this.btn_validerChoixRegion.Name = "btn_validerChoixRegion";
-            this.btn_validerChoixRegion.Size = new System.Drawing.Size(110, 30);
-            this.btn_validerChoixRegion.TabIndex = 1;
-            this.btn_validerChoixRegion.Text = "Valider";
-            this.btn_validerChoixRegion.UseVisualStyleBackColor = true;
             // 
             // gpx_frais
             // 
@@ -195,68 +157,14 @@
             this.gpx_frais.TabStop = false;
             this.gpx_frais.Text = "Modification des frais :";
             // 
-            // lbl_repasMidi
+            // btn_enregistrerFrais
             // 
-            this.lbl_repasMidi.AutoSize = true;
-            this.lbl_repasMidi.Location = new System.Drawing.Point(19, 39);
-            this.lbl_repasMidi.Name = "lbl_repasMidi";
-            this.lbl_repasMidi.Size = new System.Drawing.Size(111, 13);
-            this.lbl_repasMidi.TabIndex = 0;
-            this.lbl_repasMidi.Text = "Repas midi : maximum";
-            // 
-            // lbl_relaisEtape
-            // 
-            this.lbl_relaisEtape.AutoSize = true;
-            this.lbl_relaisEtape.Location = new System.Drawing.Point(19, 71);
-            this.lbl_relaisEtape.Name = "lbl_relaisEtape";
-            this.lbl_relaisEtape.Size = new System.Drawing.Size(118, 13);
-            this.lbl_relaisEtape.TabIndex = 1;
-            this.lbl_relaisEtape.Text = "Relais étape : maximum";
-            // 
-            // lbl_nuitee
-            // 
-            this.lbl_nuitee.AutoSize = true;
-            this.lbl_nuitee.Location = new System.Drawing.Point(19, 104);
-            this.lbl_nuitee.Name = "lbl_nuitee";
-            this.lbl_nuitee.Size = new System.Drawing.Size(122, 13);
-            this.lbl_nuitee.TabIndex = 2;
-            this.lbl_nuitee.Text = "Nuitée (hôtel) : maximum";
-            // 
-            // lbl_deplacement
-            // 
-            this.lbl_deplacement.AutoSize = true;
-            this.lbl_deplacement.Location = new System.Drawing.Point(19, 135);
-            this.lbl_deplacement.Name = "lbl_deplacement";
-            this.lbl_deplacement.Size = new System.Drawing.Size(143, 13);
-            this.lbl_deplacement.TabIndex = 3;
-            this.lbl_deplacement.Text = "Déplacement : Kilométrage à";
-            // 
-            // lbl_coutParRepas
-            // 
-            this.lbl_coutParRepas.AutoSize = true;
-            this.lbl_coutParRepas.Location = new System.Drawing.Point(293, 39);
-            this.lbl_coutParRepas.Name = "lbl_coutParRepas";
-            this.lbl_coutParRepas.Size = new System.Drawing.Size(50, 13);
-            this.lbl_coutParRepas.TabIndex = 4;
-            this.lbl_coutParRepas.Text = "€ / repas";
-            // 
-            // lbl_coutParNuitRelais
-            // 
-            this.lbl_coutParNuitRelais.AutoSize = true;
-            this.lbl_coutParNuitRelais.Location = new System.Drawing.Point(293, 71);
-            this.lbl_coutParNuitRelais.Name = "lbl_coutParNuitRelais";
-            this.lbl_coutParNuitRelais.Size = new System.Drawing.Size(41, 13);
-            this.lbl_coutParNuitRelais.TabIndex = 5;
-            this.lbl_coutParNuitRelais.Text = "€ / nuit";
-            // 
-            // lbl_coutParNuitHotel
-            // 
-            this.lbl_coutParNuitHotel.AutoSize = true;
-            this.lbl_coutParNuitHotel.Location = new System.Drawing.Point(293, 104);
-            this.lbl_coutParNuitHotel.Name = "lbl_coutParNuitHotel";
-            this.lbl_coutParNuitHotel.Size = new System.Drawing.Size(41, 13);
-            this.lbl_coutParNuitHotel.TabIndex = 6;
-            this.lbl_coutParNuitHotel.Text = "€ / nuit";
+            this.btn_enregistrerFrais.Location = new System.Drawing.Point(189, 211);
+            this.btn_enregistrerFrais.Name = "btn_enregistrerFrais";
+            this.btn_enregistrerFrais.Size = new System.Drawing.Size(127, 29);
+            this.btn_enregistrerFrais.TabIndex = 8;
+            this.btn_enregistrerFrais.Text = "Enregistrer";
+            this.btn_enregistrerFrais.UseVisualStyleBackColor = true;
             // 
             // lbl_coutParKm
             // 
@@ -267,24 +175,259 @@
             this.lbl_coutParKm.TabIndex = 7;
             this.lbl_coutParKm.Text = "€ / km";
             // 
-            // btn_enregistrerFrais
+            // lbl_coutParNuitHotel
             // 
-            this.btn_enregistrerFrais.Location = new System.Drawing.Point(189, 211);
-            this.btn_enregistrerFrais.Name = "btn_enregistrerFrais";
-            this.btn_enregistrerFrais.Size = new System.Drawing.Size(127, 29);
-            this.btn_enregistrerFrais.TabIndex = 8;
-            this.btn_enregistrerFrais.Text = "Enregistrer";
-            this.btn_enregistrerFrais.UseVisualStyleBackColor = true;
+            this.lbl_coutParNuitHotel.AutoSize = true;
+            this.lbl_coutParNuitHotel.Location = new System.Drawing.Point(293, 104);
+            this.lbl_coutParNuitHotel.Name = "lbl_coutParNuitHotel";
+            this.lbl_coutParNuitHotel.Size = new System.Drawing.Size(41, 13);
+            this.lbl_coutParNuitHotel.TabIndex = 6;
+            this.lbl_coutParNuitHotel.Text = "€ / nuit";
             // 
-            // tac_fraisAutoSimul
+            // lbl_coutParNuitRelais
             // 
-            this.tac_fraisAutoSimul.Controls.Add(this.tap_frais);
-            this.tac_fraisAutoSimul.Controls.Add(this.tap_automatisation);
-            this.tac_fraisAutoSimul.Location = new System.Drawing.Point(11, 17);
-            this.tac_fraisAutoSimul.Name = "tac_fraisAutoSimul";
-            this.tac_fraisAutoSimul.SelectedIndex = 0;
-            this.tac_fraisAutoSimul.Size = new System.Drawing.Size(922, 415);
-            this.tac_fraisAutoSimul.TabIndex = 0;
+            this.lbl_coutParNuitRelais.AutoSize = true;
+            this.lbl_coutParNuitRelais.Location = new System.Drawing.Point(293, 71);
+            this.lbl_coutParNuitRelais.Name = "lbl_coutParNuitRelais";
+            this.lbl_coutParNuitRelais.Size = new System.Drawing.Size(41, 13);
+            this.lbl_coutParNuitRelais.TabIndex = 5;
+            this.lbl_coutParNuitRelais.Text = "€ / nuit";
+            // 
+            // lbl_coutParRepas
+            // 
+            this.lbl_coutParRepas.AutoSize = true;
+            this.lbl_coutParRepas.Location = new System.Drawing.Point(293, 39);
+            this.lbl_coutParRepas.Name = "lbl_coutParRepas";
+            this.lbl_coutParRepas.Size = new System.Drawing.Size(50, 13);
+            this.lbl_coutParRepas.TabIndex = 4;
+            this.lbl_coutParRepas.Text = "€ / repas";
+            // 
+            // lbl_deplacement
+            // 
+            this.lbl_deplacement.AutoSize = true;
+            this.lbl_deplacement.Location = new System.Drawing.Point(19, 135);
+            this.lbl_deplacement.Name = "lbl_deplacement";
+            this.lbl_deplacement.Size = new System.Drawing.Size(143, 13);
+            this.lbl_deplacement.TabIndex = 3;
+            this.lbl_deplacement.Text = "Déplacement : Kilométrage à";
+            // 
+            // lbl_nuitee
+            // 
+            this.lbl_nuitee.AutoSize = true;
+            this.lbl_nuitee.Location = new System.Drawing.Point(19, 104);
+            this.lbl_nuitee.Name = "lbl_nuitee";
+            this.lbl_nuitee.Size = new System.Drawing.Size(122, 13);
+            this.lbl_nuitee.TabIndex = 2;
+            this.lbl_nuitee.Text = "Nuitée (hôtel) : maximum";
+            // 
+            // lbl_relaisEtape
+            // 
+            this.lbl_relaisEtape.AutoSize = true;
+            this.lbl_relaisEtape.Location = new System.Drawing.Point(19, 71);
+            this.lbl_relaisEtape.Name = "lbl_relaisEtape";
+            this.lbl_relaisEtape.Size = new System.Drawing.Size(118, 13);
+            this.lbl_relaisEtape.TabIndex = 1;
+            this.lbl_relaisEtape.Text = "Relais étape : maximum";
+            // 
+            // lbl_repasMidi
+            // 
+            this.lbl_repasMidi.AutoSize = true;
+            this.lbl_repasMidi.Location = new System.Drawing.Point(19, 39);
+            this.lbl_repasMidi.Name = "lbl_repasMidi";
+            this.lbl_repasMidi.Size = new System.Drawing.Size(111, 13);
+            this.lbl_repasMidi.TabIndex = 0;
+            this.lbl_repasMidi.Text = "Repas midi : maximum";
+            // 
+            // gbx_choixRegion
+            // 
+            this.gbx_choixRegion.Controls.Add(this.btn_validerChoixRegion);
+            this.gbx_choixRegion.Controls.Add(this.lbx_choixRegion);
+            this.gbx_choixRegion.Location = new System.Drawing.Point(29, 19);
+            this.gbx_choixRegion.Name = "gbx_choixRegion";
+            this.gbx_choixRegion.Size = new System.Drawing.Size(868, 76);
+            this.gbx_choixRegion.TabIndex = 0;
+            this.gbx_choixRegion.TabStop = false;
+            this.gbx_choixRegion.Text = "Choix de région :";
+            // 
+            // btn_validerChoixRegion
+            // 
+            this.btn_validerChoixRegion.Location = new System.Drawing.Point(390, 24);
+            this.btn_validerChoixRegion.Name = "btn_validerChoixRegion";
+            this.btn_validerChoixRegion.Size = new System.Drawing.Size(110, 30);
+            this.btn_validerChoixRegion.TabIndex = 1;
+            this.btn_validerChoixRegion.Text = "Valider";
+            this.btn_validerChoixRegion.UseVisualStyleBackColor = true;
+            // 
+            // lbx_choixRegion
+            // 
+            this.lbx_choixRegion.FormattingEnabled = true;
+            this.lbx_choixRegion.Location = new System.Drawing.Point(15, 24);
+            this.lbx_choixRegion.Name = "lbx_choixRegion";
+            this.lbx_choixRegion.Size = new System.Drawing.Size(315, 30);
+            this.lbx_choixRegion.TabIndex = 0;
+            // 
+            // tap_automatisation
+            // 
+            this.tap_automatisation.Controls.Add(this.btn_simulation);
+            this.tap_automatisation.Controls.Add(this.dgv_paramAutomatisation);
+            this.tap_automatisation.Location = new System.Drawing.Point(4, 22);
+            this.tap_automatisation.Name = "tap_automatisation";
+            this.tap_automatisation.Padding = new System.Windows.Forms.Padding(3);
+            this.tap_automatisation.Size = new System.Drawing.Size(914, 389);
+            this.tap_automatisation.TabIndex = 2;
+            this.tap_automatisation.Text = "Automatisation";
+            this.tap_automatisation.UseVisualStyleBackColor = true;
+            // 
+            // btn_simulation
+            // 
+            this.btn_simulation.Location = new System.Drawing.Point(742, 350);
+            this.btn_simulation.Name = "btn_simulation";
+            this.btn_simulation.Size = new System.Drawing.Size(134, 33);
+            this.btn_simulation.TabIndex = 1;
+            this.btn_simulation.Text = "Simulation";
+            this.btn_simulation.UseVisualStyleBackColor = true;
+            this.btn_simulation.Click += new System.EventHandler(this.Btn_simulation_Click);
+            // 
+            // dgv_paramAutomatisation
+            // 
+            this.dgv_paramAutomatisation.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_paramAutomatisation.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.col_activationParam,
+            this.col_nomParam});
+            this.dgv_paramAutomatisation.Location = new System.Drawing.Point(6, 6);
+            this.dgv_paramAutomatisation.Name = "dgv_paramAutomatisation";
+            this.dgv_paramAutomatisation.Size = new System.Drawing.Size(870, 323);
+            this.dgv_paramAutomatisation.TabIndex = 0;
+            // 
+            // col_activationParam
+            // 
+            this.col_activationParam.HeaderText = "Activer / Désactiver";
+            this.col_activationParam.Name = "col_activationParam";
+            this.col_activationParam.Width = 140;
+            // 
+            // col_nomParam
+            // 
+            this.col_nomParam.HeaderText = "Nom du paramètre";
+            this.col_nomParam.Name = "col_nomParam";
+            this.col_nomParam.Width = 140;
+            // 
+            // etatFiche
+            // 
+            chartArea1.Name = "etatFiche";
+            this.etatFiche.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.etatFiche.Legends.Add(legend1);
+            this.etatFiche.Location = new System.Drawing.Point(116, 122);
+            this.etatFiche.Name = "etatFiche";
+            series1.ChartArea = "etatFiche";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "etatFiche";
+            this.etatFiche.Series.Add(series1);
+            this.etatFiche.Size = new System.Drawing.Size(221, 216);
+            this.etatFiche.TabIndex = 3;
+            this.etatFiche.Text = "etatFiche";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_nom,
+            this.dgv_numFiche,
+            this.dgv_montantTotal,
+            this.dgv_fiche});
+            this.dataGridView1.Location = new System.Drawing.Point(383, 193);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(448, 93);
+            this.dataGridView1.TabIndex = 2;
+            // 
+            // dgv_nom
+            // 
+            this.dgv_nom.HeaderText = "Nom";
+            this.dgv_nom.Name = "dgv_nom";
+            // 
+            // dgv_numFiche
+            // 
+            this.dgv_numFiche.HeaderText = "Numéro de fiche";
+            this.dgv_numFiche.Name = "dgv_numFiche";
+            // 
+            // dgv_montantTotal
+            // 
+            this.dgv_montantTotal.HeaderText = "Montant total";
+            this.dgv_montantTotal.Name = "dgv_montantTotal";
+            // 
+            // dgv_fiche
+            // 
+            this.dgv_fiche.HeaderText = "Voir fiche";
+            this.dgv_fiche.Name = "dgv_fiche";
+            // 
+            // tabPage1
+            // 
+            this.tabPage1.Controls.Add(this.btn_ajouterUnUtilisateur);
+            this.tabPage1.Controls.Add(this.dataGridView2);
+            this.tabPage1.Controls.Add(this.btn_recherche);
+            this.tabPage1.Controls.Add(this.textBox1);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
+            this.tabPage1.Name = "tabPage1";
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
+            this.tabPage1.Size = new System.Drawing.Size(947, 460);
+            this.tabPage1.TabIndex = 2;
+            this.tabPage1.Text = "tabPage1";
+            this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // btn_ajouterUnUtilisateur
+            // 
+            this.btn_ajouterUnUtilisateur.Location = new System.Drawing.Point(680, 376);
+            this.btn_ajouterUnUtilisateur.Name = "btn_ajouterUnUtilisateur";
+            this.btn_ajouterUnUtilisateur.Size = new System.Drawing.Size(137, 23);
+            this.btn_ajouterUnUtilisateur.TabIndex = 7;
+            this.btn_ajouterUnUtilisateur.Text = "Ajouter un utilisateur";
+            this.btn_ajouterUnUtilisateur.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_utilisateur,
+            this.dgv_activerDesactiver,
+            this.dgv_mettreAJour});
+            this.dataGridView2.Location = new System.Drawing.Point(130, 106);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.Size = new System.Drawing.Size(580, 240);
+            this.dataGridView2.TabIndex = 6;
+            // 
+            // dgv_utilisateur
+            // 
+            this.dgv_utilisateur.HeaderText = "Utilisateur";
+            this.dgv_utilisateur.Name = "dgv_utilisateur";
+            // 
+            // dgv_activerDesactiver
+            // 
+            this.dgv_activerDesactiver.HeaderText = "Activer/désactiver";
+            this.dgv_activerDesactiver.Name = "dgv_activerDesactiver";
+            this.dgv_activerDesactiver.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_activerDesactiver.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            // 
+            // dgv_mettreAJour
+            // 
+            this.dgv_mettreAJour.HeaderText = "Mettre à jour";
+            this.dgv_mettreAJour.Name = "dgv_mettreAJour";
+            // 
+            // btn_recherche
+            // 
+            this.btn_recherche.Location = new System.Drawing.Point(361, 61);
+            this.btn_recherche.Name = "btn_recherche";
+            this.btn_recherche.Size = new System.Drawing.Size(75, 23);
+            this.btn_recherche.TabIndex = 5;
+            this.btn_recherche.Text = "Rechercher";
+            this.btn_recherche.UseVisualStyleBackColor = true;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(218, 64);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(128, 20);
+            this.textBox1.TabIndex = 4;
             // 
             // safi_dekstop
             // 
@@ -295,14 +438,20 @@
             this.Name = "safi_dekstop";
             this.Text = "SAFI_Deskstop";
             this.tac_accueilParam.ResumeLayout(false);
+            this.tap_Accueil.ResumeLayout(false);
             this.tap_param.ResumeLayout(false);
-            this.tap_automatisation.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgv_paramAutomatisation)).EndInit();
+            this.tac_fraisAutoSimul.ResumeLayout(false);
             this.tap_frais.ResumeLayout(false);
-            this.gbx_choixRegion.ResumeLayout(false);
             this.gpx_frais.ResumeLayout(false);
             this.gpx_frais.PerformLayout();
-            this.tac_fraisAutoSimul.ResumeLayout(false);
+            this.gbx_choixRegion.ResumeLayout(false);
+            this.tap_automatisation.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_paramAutomatisation)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.etatFiche)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.tabPage1.ResumeLayout(false);
+            this.tabPage1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -332,6 +481,20 @@
         private System.Windows.Forms.DataGridView dgv_paramAutomatisation;
         private System.Windows.Forms.DataGridViewCheckBoxColumn col_activationParam;
         private System.Windows.Forms.DataGridViewTextBoxColumn col_nomParam;
+        private System.Windows.Forms.DataVisualization.Charting.Chart etatFiche;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_nom;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_numFiche;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_montantTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_fiche;
+        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.Button btn_ajouterUnUtilisateur;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_utilisateur;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dgv_activerDesactiver;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_mettreAJour;
+        private System.Windows.Forms.Button btn_recherche;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

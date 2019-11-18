@@ -53,6 +53,30 @@
     <Compile Include="AccueilEtParam.Designer.cs">
       <DependentUpon>AccueilEtParam.cs</DependentUpon>
     </Compile>
+    <Compile Include="ajout_utilisateurs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ajout_utilisateurs.Designer.cs">
+      <DependentUpon>ajout_utilisateurs.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Connexion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Connexion.Designer.cs">
+      <DependentUpon>Connexion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MdpOublie.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MdpOublie.Designer.cs">
+      <DependentUpon>MdpOublie.cs</DependentUpon>
+    </Compile>
+    <Compile Include="modification_utilisateurcs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modification_utilisateurcs.Designer.cs">
+      <DependentUpon>modification_utilisateurcs.cs</DependentUpon>
+    </Compile>
     <Compile Include="Simulation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -63,6 +87,18 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AccueilEtParam.resx">
       <DependentUpon>AccueilEtParam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ajout_utilisateurs.resx">
+      <DependentUpon>ajout_utilisateurs.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Connexion.resx">
+      <DependentUpon>Connexion.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MdpOublie.resx">
+      <DependentUpon>MdpOublie.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modification_utilisateurcs.resx">
+      <DependentUpon>modification_utilisateurcs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

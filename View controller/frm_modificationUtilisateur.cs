@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace SAFI_Dekstop
 {
-    public partial class frm_modifUser : Form
+    public partial class frm_modificationUtilisateur : Form
     {
-        public frm_modifUser()
+        public frm_modificationUtilisateur()
         {
             InitializeComponent();
         }

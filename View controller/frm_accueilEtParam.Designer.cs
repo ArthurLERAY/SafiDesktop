@@ -1,6 +1,6 @@
 ﻿namespace SAFI_Dekstop
 {
-    partial class safi_dekstop
+    partial class frm_accueilEtParam
     {
         /// <summary>
         /// Variable nécessaire au concepteur.
@@ -33,6 +33,12 @@
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.tac_accueilParam = new System.Windows.Forms.TabControl();
             this.tap_Accueil = new System.Windows.Forms.TabPage();
+            this.etatFiche = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dgv_nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_numFiche = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_montantTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_fiche = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tap_param = new System.Windows.Forms.TabPage();
             this.tac_fraisAutoSimul = new System.Windows.Forms.TabControl();
             this.tap_frais = new System.Windows.Forms.TabPage();
@@ -54,22 +60,18 @@
             this.dgv_paramAutomatisation = new System.Windows.Forms.DataGridView();
             this.col_activationParam = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.col_nomParam = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.etatFiche = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dgv_nom = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_numFiche = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_montantTotal = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dgv_fiche = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.tap_gestionUtilisateurs = new System.Windows.Forms.TabPage();
             this.btn_ajouterUnUtilisateur = new System.Windows.Forms.Button();
             this.dataGridView2 = new System.Windows.Forms.DataGridView();
             this.dgv_utilisateur = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_activerDesactiver = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dgv_mettreAJour = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgv_mettreAJour = new System.Windows.Forms.DataGridViewButtonColumn();
             this.btn_recherche = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.tac_accueilParam.SuspendLayout();
             this.tap_Accueil.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.etatFiche)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.tap_param.SuspendLayout();
             this.tac_fraisAutoSimul.SuspendLayout();
             this.tap_frais.SuspendLayout();
@@ -77,9 +79,7 @@
             this.gbx_choixRegion.SuspendLayout();
             this.tap_automatisation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_paramAutomatisation)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.etatFiche)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            this.tabPage1.SuspendLayout();
+            this.tap_gestionUtilisateurs.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
@@ -87,7 +87,7 @@
             // 
             this.tac_accueilParam.Controls.Add(this.tap_Accueil);
             this.tac_accueilParam.Controls.Add(this.tap_param);
-            this.tac_accueilParam.Controls.Add(this.tabPage1);
+            this.tac_accueilParam.Controls.Add(this.tap_gestionUtilisateurs);
             this.tac_accueilParam.Location = new System.Drawing.Point(12, 12);
             this.tac_accueilParam.Name = "tac_accueilParam";
             this.tac_accueilParam.SelectedIndex = 0;
@@ -105,6 +105,56 @@
             this.tap_Accueil.TabIndex = 0;
             this.tap_Accueil.Text = "Accueil";
             this.tap_Accueil.UseVisualStyleBackColor = true;
+            // 
+            // etatFiche
+            // 
+            chartArea1.Name = "etatFiche";
+            this.etatFiche.ChartAreas.Add(chartArea1);
+            legend1.Name = "Legend1";
+            this.etatFiche.Legends.Add(legend1);
+            this.etatFiche.Location = new System.Drawing.Point(116, 122);
+            this.etatFiche.Name = "etatFiche";
+            series1.ChartArea = "etatFiche";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
+            series1.Legend = "Legend1";
+            series1.Name = "etatFiche";
+            this.etatFiche.Series.Add(series1);
+            this.etatFiche.Size = new System.Drawing.Size(221, 216);
+            this.etatFiche.TabIndex = 3;
+            this.etatFiche.Text = "etatFiche";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_nom,
+            this.dgv_numFiche,
+            this.dgv_montantTotal,
+            this.dgv_fiche});
+            this.dataGridView1.Location = new System.Drawing.Point(383, 193);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(448, 93);
+            this.dataGridView1.TabIndex = 2;
+            // 
+            // dgv_nom
+            // 
+            this.dgv_nom.HeaderText = "Nom";
+            this.dgv_nom.Name = "dgv_nom";
+            // 
+            // dgv_numFiche
+            // 
+            this.dgv_numFiche.HeaderText = "Numéro de fiche";
+            this.dgv_numFiche.Name = "dgv_numFiche";
+            // 
+            // dgv_montantTotal
+            // 
+            this.dgv_montantTotal.HeaderText = "Montant total";
+            this.dgv_montantTotal.Name = "dgv_montantTotal";
+            // 
+            // dgv_fiche
+            // 
+            this.dgv_fiche.HeaderText = "Voir fiche";
+            this.dgv_fiche.Name = "dgv_fiche";
             // 
             // tap_param
             // 
@@ -311,69 +361,19 @@
             this.col_nomParam.Name = "col_nomParam";
             this.col_nomParam.Width = 140;
             // 
-            // etatFiche
+            // tap_gestionUtilisateurs
             // 
-            chartArea1.Name = "etatFiche";
-            this.etatFiche.ChartAreas.Add(chartArea1);
-            legend1.Name = "Legend1";
-            this.etatFiche.Legends.Add(legend1);
-            this.etatFiche.Location = new System.Drawing.Point(116, 122);
-            this.etatFiche.Name = "etatFiche";
-            series1.ChartArea = "etatFiche";
-            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Pie;
-            series1.Legend = "Legend1";
-            series1.Name = "etatFiche";
-            this.etatFiche.Series.Add(series1);
-            this.etatFiche.Size = new System.Drawing.Size(221, 216);
-            this.etatFiche.TabIndex = 3;
-            this.etatFiche.Text = "etatFiche";
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dgv_nom,
-            this.dgv_numFiche,
-            this.dgv_montantTotal,
-            this.dgv_fiche});
-            this.dataGridView1.Location = new System.Drawing.Point(383, 193);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(448, 93);
-            this.dataGridView1.TabIndex = 2;
-            // 
-            // dgv_nom
-            // 
-            this.dgv_nom.HeaderText = "Nom";
-            this.dgv_nom.Name = "dgv_nom";
-            // 
-            // dgv_numFiche
-            // 
-            this.dgv_numFiche.HeaderText = "Numéro de fiche";
-            this.dgv_numFiche.Name = "dgv_numFiche";
-            // 
-            // dgv_montantTotal
-            // 
-            this.dgv_montantTotal.HeaderText = "Montant total";
-            this.dgv_montantTotal.Name = "dgv_montantTotal";
-            // 
-            // dgv_fiche
-            // 
-            this.dgv_fiche.HeaderText = "Voir fiche";
-            this.dgv_fiche.Name = "dgv_fiche";
-            // 
-            // tabPage1
-            // 
-            this.tabPage1.Controls.Add(this.btn_ajouterUnUtilisateur);
-            this.tabPage1.Controls.Add(this.dataGridView2);
-            this.tabPage1.Controls.Add(this.btn_recherche);
-            this.tabPage1.Controls.Add(this.textBox1);
-            this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(947, 460);
-            this.tabPage1.TabIndex = 2;
-            this.tabPage1.Text = "tabPage1";
-            this.tabPage1.UseVisualStyleBackColor = true;
+            this.tap_gestionUtilisateurs.Controls.Add(this.btn_ajouterUnUtilisateur);
+            this.tap_gestionUtilisateurs.Controls.Add(this.dataGridView2);
+            this.tap_gestionUtilisateurs.Controls.Add(this.btn_recherche);
+            this.tap_gestionUtilisateurs.Controls.Add(this.textBox1);
+            this.tap_gestionUtilisateurs.Location = new System.Drawing.Point(4, 22);
+            this.tap_gestionUtilisateurs.Name = "tap_gestionUtilisateurs";
+            this.tap_gestionUtilisateurs.Padding = new System.Windows.Forms.Padding(3);
+            this.tap_gestionUtilisateurs.Size = new System.Drawing.Size(947, 460);
+            this.tap_gestionUtilisateurs.TabIndex = 2;
+            this.tap_gestionUtilisateurs.Text = "Gestion des utilisateurs";
+            this.tap_gestionUtilisateurs.UseVisualStyleBackColor = true;
             // 
             // btn_ajouterUnUtilisateur
             // 
@@ -383,6 +383,7 @@
             this.btn_ajouterUnUtilisateur.TabIndex = 7;
             this.btn_ajouterUnUtilisateur.Text = "Ajouter un utilisateur";
             this.btn_ajouterUnUtilisateur.UseVisualStyleBackColor = true;
+            this.btn_ajouterUnUtilisateur.Click += new System.EventHandler(this.Btn_ajouterUnUtilisateur_Click);
             // 
             // dataGridView2
             // 
@@ -412,6 +413,8 @@
             // 
             this.dgv_mettreAJour.HeaderText = "Mettre à jour";
             this.dgv_mettreAJour.Name = "dgv_mettreAJour";
+            this.dgv_mettreAJour.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_mettreAJour.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
             // 
             // btn_recherche
             // 
@@ -429,16 +432,19 @@
             this.textBox1.Size = new System.Drawing.Size(128, 20);
             this.textBox1.TabIndex = 4;
             // 
-            // safi_dekstop
+            // frm_accueilEtParam
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(979, 589);
             this.Controls.Add(this.tac_accueilParam);
-            this.Name = "safi_dekstop";
-            this.Text = "SAFI_Deskstop";
+            this.Name = "frm_accueilEtParam";
+            this.Text = "SafiRepay";
+            this.Load += new System.EventHandler(this.Frm_accueilEtParam_Load);
             this.tac_accueilParam.ResumeLayout(false);
             this.tap_Accueil.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.etatFiche)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.tap_param.ResumeLayout(false);
             this.tac_fraisAutoSimul.ResumeLayout(false);
             this.tap_frais.ResumeLayout(false);
@@ -447,10 +453,8 @@
             this.gbx_choixRegion.ResumeLayout(false);
             this.tap_automatisation.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgv_paramAutomatisation)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.etatFiche)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            this.tabPage1.ResumeLayout(false);
-            this.tabPage1.PerformLayout();
+            this.tap_gestionUtilisateurs.ResumeLayout(false);
+            this.tap_gestionUtilisateurs.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
 
@@ -487,14 +491,14 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_numFiche;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_montantTotal;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_fiche;
-        private System.Windows.Forms.TabPage tabPage1;
+        private System.Windows.Forms.TabPage tap_gestionUtilisateurs;
         private System.Windows.Forms.Button btn_ajouterUnUtilisateur;
         private System.Windows.Forms.DataGridView dataGridView2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_utilisateur;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn dgv_activerDesactiver;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_mettreAJour;
         private System.Windows.Forms.Button btn_recherche;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dgv_utilisateur;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dgv_activerDesactiver;
+        private System.Windows.Forms.DataGridViewButtonColumn dgv_mettreAJour;
     }
 }
 

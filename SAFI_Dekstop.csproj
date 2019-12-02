@@ -33,8 +33,18 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="RestSharp, Version=106.6.10.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">
+      <HintPath>packages\RestSharp.106.6.10\lib\net452\RestSharp.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web" />
     <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -47,58 +57,62 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AccueilEtParam.cs">
+    <Compile Include="RAO\Login.cs" />
+    <Compile Include="RAO\LoginRAO.cs" />
+    <Compile Include="RAO\Object.cs" />
+    <Compile Include="RAO\RAO.cs" />
+    <Compile Include="View controller\frm_accueilEtParam.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AccueilEtParam.Designer.cs">
-      <DependentUpon>AccueilEtParam.cs</DependentUpon>
+    <Compile Include="View controller\frm_accueilEtParam.Designer.cs">
+      <DependentUpon>frm_accueilEtParam.cs</DependentUpon>
     </Compile>
-    <Compile Include="ajout_utilisateurs.cs">
+    <Compile Include="View controller\frm_ajoutUtilisateurs.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ajout_utilisateurs.Designer.cs">
-      <DependentUpon>ajout_utilisateurs.cs</DependentUpon>
+    <Compile Include="View controller\frm_ajoutUtilisateurs.Designer.cs">
+      <DependentUpon>frm_ajoutUtilisateurs.cs</DependentUpon>
     </Compile>
-    <Compile Include="Connexion.cs">
+    <Compile Include="View controller\frm_connexion.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Connexion.Designer.cs">
-      <DependentUpon>Connexion.cs</DependentUpon>
+    <Compile Include="View controller\frm_connexion.Designer.cs">
+      <DependentUpon>frm_connexion.cs</DependentUpon>
     </Compile>
-    <Compile Include="MdpOublie.cs">
+    <Compile Include="View controller\frm_mdpOublie.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MdpOublie.Designer.cs">
-      <DependentUpon>MdpOublie.cs</DependentUpon>
+    <Compile Include="View controller\frm_mdpOublie.Designer.cs">
+      <DependentUpon>frm_mdpOublie.cs</DependentUpon>
     </Compile>
-    <Compile Include="modification_utilisateurcs.cs">
+    <Compile Include="View controller\frm_modificationUtilisateur.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="modification_utilisateurcs.Designer.cs">
-      <DependentUpon>modification_utilisateurcs.cs</DependentUpon>
+    <Compile Include="View controller\frm_modificationUtilisateur.Designer.cs">
+      <DependentUpon>frm_modificationUtilisateur.cs</DependentUpon>
     </Compile>
-    <Compile Include="Simulation.cs">
+    <Compile Include="View controller\frm_simulation.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Simulation.Designer.cs">
-      <DependentUpon>Simulation.cs</DependentUpon>
+    <Compile Include="View controller\frm_simulation.Designer.cs">
+      <DependentUpon>frm_simulation.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="AccueilEtParam.resx">
-      <DependentUpon>AccueilEtParam.cs</DependentUpon>
+    <EmbeddedResource Include="View controller\frm_accueilEtParam.resx">
+      <DependentUpon>frm_accueilEtParam.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ajout_utilisateurs.resx">
-      <DependentUpon>ajout_utilisateurs.cs</DependentUpon>
+    <EmbeddedResource Include="View controller\frm_ajoutUtilisateurs.resx">
+      <DependentUpon>frm_ajoutUtilisateurs.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Connexion.resx">
-      <DependentUpon>Connexion.cs</DependentUpon>
+    <EmbeddedResource Include="View controller\frm_connexion.resx">
+      <DependentUpon>frm_connexion.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MdpOublie.resx">
-      <DependentUpon>MdpOublie.cs</DependentUpon>
+    <EmbeddedResource Include="View controller\frm_mdpOublie.resx">
+      <DependentUpon>frm_mdpOublie.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="modification_utilisateurcs.resx">
-      <DependentUpon>modification_utilisateurcs.cs</DependentUpon>
+    <EmbeddedResource Include="View controller\frm_modificationUtilisateur.resx">
+      <DependentUpon>frm_modificationUtilisateur.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -108,10 +122,12 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Simulation.resx">
-      <DependentUpon>Simulation.cs</DependentUpon>
+    <EmbeddedResource Include="View controller\frm_simulation.resx">
+      <DependentUpon>frm_simulation.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -125,5 +141,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -30,11 +30,11 @@
         {
             this.lbl_identifiantConnexion = new System.Windows.Forms.Label();
             this.lbl_mdpConnexion = new System.Windows.Forms.Label();
-            this.lbl_mdpOublie = new System.Windows.Forms.Label();
             this.tbx_identifiantConnexion = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.tbx_pwd = new System.Windows.Forms.TextBox();
             this.btn_submit = new System.Windows.Forms.Button();
             this.rbn_rememberMe = new System.Windows.Forms.RadioButton();
+            this.lkl_mdpOublie = new System.Windows.Forms.LinkLabel();
             this.SuspendLayout();
             // 
             // lbl_identifiantConnexion
@@ -55,17 +55,6 @@
             this.lbl_mdpConnexion.TabIndex = 1;
             this.lbl_mdpConnexion.Text = "Mot de passe :";
             // 
-            // lbl_mdpOublie
-            // 
-            this.lbl_mdpOublie.AutoSize = true;
-            this.lbl_mdpOublie.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbl_mdpOublie.Location = new System.Drawing.Point(365, 259);
-            this.lbl_mdpOublie.Name = "lbl_mdpOublie";
-            this.lbl_mdpOublie.Size = new System.Drawing.Size(102, 13);
-            this.lbl_mdpOublie.TabIndex = 2;
-            this.lbl_mdpOublie.Text = "Mot de passe oublié";
-            this.lbl_mdpOublie.Click += new System.EventHandler(this.Lbl_mdpOublie_Click);
-            // 
             // tbx_identifiantConnexion
             // 
             this.tbx_identifiantConnexion.Location = new System.Drawing.Point(208, 83);
@@ -73,12 +62,13 @@
             this.tbx_identifiantConnexion.Size = new System.Drawing.Size(100, 20);
             this.tbx_identifiantConnexion.TabIndex = 4;
             // 
-            // textBox2
+            // tbx_pwd
             // 
-            this.textBox2.Location = new System.Drawing.Point(212, 199);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(96, 20);
-            this.textBox2.TabIndex = 5;
+            this.tbx_pwd.Location = new System.Drawing.Point(212, 199);
+            this.tbx_pwd.Name = "tbx_pwd";
+            this.tbx_pwd.PasswordChar = '*';
+            this.tbx_pwd.Size = new System.Drawing.Size(96, 20);
+            this.tbx_pwd.TabIndex = 5;
             // 
             // btn_submit
             // 
@@ -88,6 +78,7 @@
             this.btn_submit.TabIndex = 7;
             this.btn_submit.Text = "Se connecter";
             this.btn_submit.UseVisualStyleBackColor = true;
+            this.btn_submit.Click += new System.EventHandler(this.Btn_submit_Click);
             // 
             // rbn_rememberMe
             // 
@@ -101,20 +92,32 @@
             this.rbn_rememberMe.Text = "Se rappeler de moi";
             this.rbn_rememberMe.UseVisualStyleBackColor = true;
             // 
+            // lkl_mdpOublie
+            // 
+            this.lkl_mdpOublie.AutoSize = true;
+            this.lkl_mdpOublie.Location = new System.Drawing.Point(377, 261);
+            this.lkl_mdpOublie.Name = "lkl_mdpOublie";
+            this.lkl_mdpOublie.Size = new System.Drawing.Size(111, 13);
+            this.lkl_mdpOublie.TabIndex = 9;
+            this.lkl_mdpOublie.TabStop = true;
+            this.lkl_mdpOublie.Text = "Mot de passe oublié ?";
+            this.lkl_mdpOublie.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.Lkl_mdpOublie_LinkClicked);
+            // 
             // frm_connexion
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(601, 360);
+            this.Controls.Add(this.lkl_mdpOublie);
             this.Controls.Add(this.rbn_rememberMe);
             this.Controls.Add(this.btn_submit);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.tbx_pwd);
             this.Controls.Add(this.tbx_identifiantConnexion);
-            this.Controls.Add(this.lbl_mdpOublie);
             this.Controls.Add(this.lbl_mdpConnexion);
             this.Controls.Add(this.lbl_identifiantConnexion);
             this.Name = "frm_connexion";
             this.Text = "Connexion";
+            this.Load += new System.EventHandler(this.Frm_connexion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -124,10 +127,10 @@
 
         private System.Windows.Forms.Label lbl_identifiantConnexion;
         private System.Windows.Forms.Label lbl_mdpConnexion;
-        private System.Windows.Forms.Label lbl_mdpOublie;
         private System.Windows.Forms.TextBox tbx_identifiantConnexion;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox tbx_pwd;
         private System.Windows.Forms.Button btn_submit;
         private System.Windows.Forms.RadioButton rbn_rememberMe;
+        private System.Windows.Forms.LinkLabel lkl_mdpOublie;
     }
 }

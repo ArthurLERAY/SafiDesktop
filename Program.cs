@@ -16,7 +16,7 @@ namespace SAFI_Dekstop
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new safi_dekstop());
+            Application.Run(new frm_accueilEtParam());
         }
     }
 }

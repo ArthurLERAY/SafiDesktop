@@ -27,11 +27,6 @@ namespace SAFI_Dekstop.RAO
         public Login()
         {
 
-
-
-
-
-
         }
     }
 }

@@ -27,16 +27,13 @@ namespace SAFI_Dekstop
 
         private void Frm_connexion_Load(object sender, EventArgs e)
         {
-            BringToFront();
+          
         }
 
         private void Btn_submit_Click(object sender, EventArgs e)
         {
             var userConnected = LoginRAO.getLogin("test", "test");
 
-            //Form dashboard = new frm_accueilEtParam(userConnected);
-            //dashboard.Show();
-            //Hide();
         }
     }
 }

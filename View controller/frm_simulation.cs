@@ -21,5 +21,9 @@ namespace SAFI_Dekstop
         {
             this.Close();
         }
+
+        
+
+
     }
 }

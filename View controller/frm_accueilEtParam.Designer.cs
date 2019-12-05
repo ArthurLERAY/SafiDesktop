@@ -62,7 +62,7 @@
             this.col_nomParam = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tap_gestionUtilisateurs = new System.Windows.Forms.TabPage();
             this.btn_ajouterUnUtilisateur = new System.Windows.Forms.Button();
-            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.dgv_users = new System.Windows.Forms.DataGridView();
             this.dgv_utilisateur = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgv_activerDesactiver = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dgv_mettreAJour = new System.Windows.Forms.DataGridViewButtonColumn();
@@ -80,7 +80,7 @@
             this.tap_automatisation.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_paramAutomatisation)).BeginInit();
             this.tap_gestionUtilisateurs.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_users)).BeginInit();
             this.SuspendLayout();
             // 
             // tac_accueilParam
@@ -364,7 +364,7 @@
             // tap_gestionUtilisateurs
             // 
             this.tap_gestionUtilisateurs.Controls.Add(this.btn_ajouterUnUtilisateur);
-            this.tap_gestionUtilisateurs.Controls.Add(this.dataGridView2);
+            this.tap_gestionUtilisateurs.Controls.Add(this.dgv_users);
             this.tap_gestionUtilisateurs.Controls.Add(this.btn_recherche);
             this.tap_gestionUtilisateurs.Controls.Add(this.textBox1);
             this.tap_gestionUtilisateurs.Location = new System.Drawing.Point(4, 22);
@@ -385,17 +385,18 @@
             this.btn_ajouterUnUtilisateur.UseVisualStyleBackColor = true;
             this.btn_ajouterUnUtilisateur.Click += new System.EventHandler(this.Btn_ajouterUnUtilisateur_Click);
             // 
-            // dataGridView2
+            // dgv_users
             // 
-            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgv_users.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgv_users.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dgv_utilisateur,
             this.dgv_activerDesactiver,
             this.dgv_mettreAJour});
-            this.dataGridView2.Location = new System.Drawing.Point(130, 106);
-            this.dataGridView2.Name = "dataGridView2";
-            this.dataGridView2.Size = new System.Drawing.Size(580, 240);
-            this.dataGridView2.TabIndex = 6;
+            this.dgv_users.Location = new System.Drawing.Point(130, 106);
+            this.dgv_users.Name = "dgv_users";
+            this.dgv_users.Size = new System.Drawing.Size(580, 240);
+            this.dgv_users.TabIndex = 6;
+            this.dgv_users.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.Dgv_users_CellContentClick);
             // 
             // dgv_utilisateur
             // 
@@ -455,7 +456,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dgv_paramAutomatisation)).EndInit();
             this.tap_gestionUtilisateurs.ResumeLayout(false);
             this.tap_gestionUtilisateurs.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgv_users)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -493,7 +494,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_fiche;
         private System.Windows.Forms.TabPage tap_gestionUtilisateurs;
         private System.Windows.Forms.Button btn_ajouterUnUtilisateur;
-        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.DataGridView dgv_users;
         private System.Windows.Forms.Button btn_recherche;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dgv_utilisateur;

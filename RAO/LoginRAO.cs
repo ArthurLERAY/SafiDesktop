@@ -14,17 +14,15 @@ namespace SAFI_Dekstop.RAO
         {
             var routeLogin = "login/" + login + "/" + pwd;
 
-            //Debug.WriteLine(routeLogin);
+            Debug.WriteLine(routeLogin);
             var json = RAO.get(routeLogin);
 
             Debug.WriteLine(json);
             Login unLogin = JsonConvert.DeserializeObject<Login>(json);
 
-            //Debug.WriteLine(unLogin);
+            Debug.WriteLine(unLogin);
             //Debug.WriteLine(unLogin.address);
             return unLogin;
-
-
 
         }
     }

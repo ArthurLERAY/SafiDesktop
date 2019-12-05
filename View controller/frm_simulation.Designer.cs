@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.lbl_simulation = new System.Windows.Forms.Label();
-            this.pgb_avantSimulation = new System.Windows.Forms.ProgressBar();
-            this.pgb_apresSimulation = new System.Windows.Forms.ProgressBar();
             this.btn_lancerSimulation = new System.Windows.Forms.Button();
             this.btn_validerSimulation = new System.Windows.Forms.Button();
             this.btn_annulerSimulation = new System.Windows.Forms.Button();
@@ -42,6 +40,8 @@
             this.lbl_fichiersAtraiterAp = new System.Windows.Forms.Label();
             this.lbl_couleurFichiersTraitesAp = new System.Windows.Forms.Label();
             this.lbl_fichiersTraitesAp = new System.Windows.Forms.Label();
+            this.pgb_avSimul = new System.Windows.Forms.ProgressBar();
+            this.pgb_apSimul = new System.Windows.Forms.ProgressBar();
             this.SuspendLayout();
             // 
             // lbl_simulation
@@ -53,23 +53,9 @@
             this.lbl_simulation.TabIndex = 2;
             this.lbl_simulation.Text = "Simulation";
             // 
-            // pgb_avantSimulation
-            // 
-            this.pgb_avantSimulation.Location = new System.Drawing.Point(222, 63);
-            this.pgb_avantSimulation.Name = "pgb_avantSimulation";
-            this.pgb_avantSimulation.Size = new System.Drawing.Size(353, 35);
-            this.pgb_avantSimulation.TabIndex = 3;
-            // 
-            // pgb_apresSimulation
-            // 
-            this.pgb_apresSimulation.Location = new System.Drawing.Point(222, 266);
-            this.pgb_apresSimulation.Name = "pgb_apresSimulation";
-            this.pgb_apresSimulation.Size = new System.Drawing.Size(353, 35);
-            this.pgb_apresSimulation.TabIndex = 4;
-            // 
             // btn_lancerSimulation
             // 
-            this.btn_lancerSimulation.Location = new System.Drawing.Point(317, 220);
+            this.btn_lancerSimulation.Location = new System.Drawing.Point(312, 187);
             this.btn_lancerSimulation.Name = "btn_lancerSimulation";
             this.btn_lancerSimulation.Size = new System.Drawing.Size(182, 31);
             this.btn_lancerSimulation.TabIndex = 5;
@@ -172,11 +158,27 @@
             this.lbl_fichiersTraitesAp.TabIndex = 15;
             this.lbl_fichiersTraitesAp.Text = "Fichiers traités";
             // 
+            // pgb_avSimul
+            // 
+            this.pgb_avSimul.Location = new System.Drawing.Point(360, 53);
+            this.pgb_avSimul.Name = "pgb_avSimul";
+            this.pgb_avSimul.Size = new System.Drawing.Size(100, 23);
+            this.pgb_avSimul.TabIndex = 16;
+            // 
+            // pgb_apSimul
+            // 
+            this.pgb_apSimul.Location = new System.Drawing.Point(360, 269);
+            this.pgb_apSimul.Name = "pgb_apSimul";
+            this.pgb_apSimul.Size = new System.Drawing.Size(100, 23);
+            this.pgb_apSimul.TabIndex = 17;
+            // 
             // frm_simulation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(894, 553);
+            this.Controls.Add(this.pgb_apSimul);
+            this.Controls.Add(this.pgb_avSimul);
             this.Controls.Add(this.lbl_fichiersTraitesAp);
             this.Controls.Add(this.lbl_couleurFichiersTraitesAp);
             this.Controls.Add(this.lbl_fichiersAtraiterAp);
@@ -188,8 +190,6 @@
             this.Controls.Add(this.btn_annulerSimulation);
             this.Controls.Add(this.btn_validerSimulation);
             this.Controls.Add(this.btn_lancerSimulation);
-            this.Controls.Add(this.pgb_apresSimulation);
-            this.Controls.Add(this.pgb_avantSimulation);
             this.Controls.Add(this.lbl_simulation);
             this.Name = "frm_simulation";
             this.Text = "SAFI_Dekstop";
@@ -201,8 +201,6 @@
         #endregion
 
         private System.Windows.Forms.Label lbl_simulation;
-        private System.Windows.Forms.ProgressBar pgb_avantSimulation;
-        private System.Windows.Forms.ProgressBar pgb_apresSimulation;
         private System.Windows.Forms.Button btn_lancerSimulation;
         private System.Windows.Forms.Button btn_validerSimulation;
         private System.Windows.Forms.Button btn_annulerSimulation;
@@ -214,5 +212,7 @@
         private System.Windows.Forms.Label lbl_fichiersAtraiterAp;
         private System.Windows.Forms.Label lbl_couleurFichiersTraitesAp;
         private System.Windows.Forms.Label lbl_fichiersTraitesAp;
+        private System.Windows.Forms.ProgressBar pgb_avSimul;
+        private System.Windows.Forms.ProgressBar pgb_apSimul;
     }
 }

@@ -160,16 +160,18 @@
             // 
             // pgb_avSimul
             // 
-            this.pgb_avSimul.Location = new System.Drawing.Point(360, 53);
+            this.pgb_avSimul.Location = new System.Drawing.Point(275, 53);
             this.pgb_avSimul.Name = "pgb_avSimul";
-            this.pgb_avSimul.Size = new System.Drawing.Size(100, 23);
+            this.pgb_avSimul.Size = new System.Drawing.Size(244, 23);
+            this.pgb_avSimul.Step = 1;
             this.pgb_avSimul.TabIndex = 16;
             // 
             // pgb_apSimul
             // 
-            this.pgb_apSimul.Location = new System.Drawing.Point(360, 269);
+            this.pgb_apSimul.Location = new System.Drawing.Point(275, 269);
             this.pgb_apSimul.Name = "pgb_apSimul";
-            this.pgb_apSimul.Size = new System.Drawing.Size(100, 23);
+            this.pgb_apSimul.Size = new System.Drawing.Size(244, 23);
+            this.pgb_apSimul.Step = 1;
             this.pgb_apSimul.TabIndex = 17;
             // 
             // frm_simulation

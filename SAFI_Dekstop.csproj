@@ -57,9 +57,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="RAO\Cost.cs" />
+    <Compile Include="RAO\Employee.cs" />
     <Compile Include="RAO\Login.cs" />
-    <Compile Include="RAO\LoginRAO.cs" />
+    <Compile Include="RAO\Parameters.cs" />
     <Compile Include="RAO\RAO.cs" />
+    <Compile Include="RAO\Sector.cs" />
     <Compile Include="View controller\frm_accueilEtParam.cs">
       <SubType>Form</SubType>
     </Compile>

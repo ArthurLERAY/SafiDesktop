@@ -57,14 +57,14 @@
             // 
             // tbx_identifiantConnexion
             // 
-            this.tbx_identifiantConnexion.Location = new System.Drawing.Point(208, 83);
+            this.tbx_identifiantConnexion.Location = new System.Drawing.Point(208, 75);
             this.tbx_identifiantConnexion.Name = "tbx_identifiantConnexion";
             this.tbx_identifiantConnexion.Size = new System.Drawing.Size(100, 20);
             this.tbx_identifiantConnexion.TabIndex = 4;
             // 
             // tbx_pwd
             // 
-            this.tbx_pwd.Location = new System.Drawing.Point(212, 199);
+            this.tbx_pwd.Location = new System.Drawing.Point(208, 189);
             this.tbx_pwd.Name = "tbx_pwd";
             this.tbx_pwd.PasswordChar = '*';
             this.tbx_pwd.Size = new System.Drawing.Size(96, 20);
@@ -117,6 +117,7 @@
             this.Controls.Add(this.lbl_identifiantConnexion);
             this.Name = "frm_connexion";
             this.Text = "Connexion";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Frm_connexion_FormClosing);
             this.Load += new System.EventHandler(this.Frm_connexion_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

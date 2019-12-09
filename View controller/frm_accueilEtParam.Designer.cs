@@ -315,6 +315,7 @@
             this.lbx_choixRegion.Name = "lbx_choixRegion";
             this.lbx_choixRegion.Size = new System.Drawing.Size(315, 30);
             this.lbx_choixRegion.TabIndex = 0;
+            this.lbx_choixRegion.SelectedIndexChanged += new System.EventHandler(this.Lbx_choixRegion_SelectedIndexChanged);
             // 
             // tap_automatisation
             // 

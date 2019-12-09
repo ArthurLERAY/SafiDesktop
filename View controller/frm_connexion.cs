@@ -35,5 +35,10 @@ namespace SAFI_Dekstop
             var userConnected = LoginRAO.getLogin("test", "test");
 
         }
+
+        private void Frm_connexion_FormClosing(object sender, FormClosingEventArgs e)
+        {
+           // Application.Exit();
+        }
     }
 }

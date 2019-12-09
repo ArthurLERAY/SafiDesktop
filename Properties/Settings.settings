@@ -2,8 +2,8 @@
 <SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="SAFI_Dekstop.Properties" GeneratedClassName="Settings">
   <Profiles />
   <Settings>
-    <Setting Name="routeApi" Type="System.String" Scope="User">
-      <Value Profile="(Default)">http://192.168.200.156:52080/api</Value>
+    <Setting Name="routeApi" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">http://192.168.200.158:8000/api</Value>
     </Setting>
   </Settings>
 </SettingsFile>

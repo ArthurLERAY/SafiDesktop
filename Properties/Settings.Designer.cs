@@ -23,15 +23,12 @@ namespace SAFI_Dekstop.Properties {
             }
         }
         
-        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("http://192.168.200.156:52080/api")]
+        [global::System.Configuration.DefaultSettingValueAttribute("http://192.168.200.158:8000/api")]
         public string routeApi {
             get {
                 return ((string)(this["routeApi"]));
-            }
-            set {
-                this["routeApi"] = value;
             }
         }
     }

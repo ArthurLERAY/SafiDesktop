@@ -46,5 +46,10 @@ namespace SAFI_Dekstop
                 modifUserOpen.Show();
             }
         }
+
+        private void Lbx_choixRegion_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

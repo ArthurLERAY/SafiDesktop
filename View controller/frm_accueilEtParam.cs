@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SAFI_Dekstop.RAO;
 
 namespace SAFI_Dekstop
 {
     public partial class frm_accueilEtParam : Form
     {
-        public frm_accueilEtParam()
+        //Attributs de la classe
+        public User user;
+
+        //Methodes de la classe
+        public frm_accueilEtParam(User userNew=null)
         {
             InitializeComponent();
+            this.user = userNew;
         }
 
         private void Btn_simulation_Click(object sender, EventArgs e)

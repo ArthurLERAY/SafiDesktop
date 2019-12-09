@@ -31,10 +31,19 @@ namespace SAFI_Dekstop.RAO
 
             //Debug.WriteLine(response.Content);
             return response.Content;
+        }
 
+        public static String put(String route, String paramRoute)
+        {
 
-
-
+            RestClient client = new RestClient();
+            client.BaseUrl = new Uri(Properties.Settings.Default.routeApi);
+            //put
+            RestRequest request = new RestRequest(route, Method.PUT);
+            request.AddJsonBody(paramRoute);
+            IRestResponse response = client.Execute(request);
+            //Debug.WriteLine(response.Content);
+            return response.Content;
         }
     }
 }

@@ -9,7 +9,7 @@ using Newtonsoft.Json.Linq;
 
 namespace SAFI_Dekstop.RAO
 {
-    class Login
+    public class User
     {
         public Int64 id { get; set; }
         public String code { get; set; }
@@ -26,7 +26,9 @@ namespace SAFI_Dekstop.RAO
         public String api_token { get; set; }
         public String district_id { get; set; }
         
-         public static Login getLogin(String login, String pwd)
+
+
+         public static User getLogin(String login, String pwd)
          {
             var routeLogin = "login/" + login + "/" + pwd;
 
@@ -34,7 +36,7 @@ namespace SAFI_Dekstop.RAO
             var json = RAO.get(routeLogin);
 
               
-            Login unLogin = JsonConvert.DeserializeObject<Login>(json);
+            User unLogin = JsonConvert.DeserializeObject<User>(json);
 
                
             //Debug.WriteLine(unLogin.address);

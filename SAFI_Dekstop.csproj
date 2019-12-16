@@ -60,7 +60,7 @@
     <Compile Include="RAO\sheet.cs" />
     <Compile Include="RAO\Cost.cs" />
     <Compile Include="RAO\Employee.cs" />
-    <Compile Include="RAO\Login.cs" />
+    <Compile Include="RAO\User.cs" />
     <Compile Include="RAO\Parameters.cs" />
     <Compile Include="RAO\RAO.cs" />
     <Compile Include="RAO\Sector.cs" />

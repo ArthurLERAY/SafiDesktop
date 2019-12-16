@@ -8,17 +8,17 @@ using Newtonsoft.Json.Linq;
 
 namespace SAFI_Dekstop.RAO
 {
-    class Parameters
+    class sheet
     {
         public String id { get; set; }
         public String  name { get; set; }
 
-        public Parameters GetParemetres(string parameters_id)
+        public sheet GetParemetres(string parameters_id)
         {
             JObject jsonParse = JObject.Parse(RAO.get("profile/find/" + parameters_id));
 
 
-            return JsonConvert.DeserializeObject<Parameters>(jsonParse["content"].ToString());
+            return JsonConvert.DeserializeObject<sheet>(jsonParse["content"].ToString());
 
         }
     }

@@ -32,7 +32,7 @@ namespace SAFI_Dekstop
 
         private void Btn_submit_Click(object sender, EventArgs e)
         {
-            var userConnected = LoginRAO.getLogin("test", "test");
+            var userConnected = Login.getLogin("test", "test");
 
         }
 

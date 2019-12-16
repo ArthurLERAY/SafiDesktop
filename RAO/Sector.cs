@@ -15,7 +15,6 @@ namespace SAFI_Dekstop.RAO
 
 
 
-        /// <param name="sector_id">ID de l'employé</param>
         public Sector GetById(string sector_id)
         {
             JObject jsonParse = JObject.Parse(RAO.get("profile/find/" + sector_id));

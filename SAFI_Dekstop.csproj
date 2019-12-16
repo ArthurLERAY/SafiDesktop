@@ -57,6 +57,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="RAO\sheet.cs" />
     <Compile Include="RAO\Cost.cs" />
     <Compile Include="RAO\Employee.cs" />
     <Compile Include="RAO\Login.cs" />
